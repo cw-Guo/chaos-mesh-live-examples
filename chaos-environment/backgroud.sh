@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "done" >> /root/katacoda-finished
 useradd -m -d /home/ubuntu -G sudo -p $(openssl passwd -1 password) ubuntu && cd /home/ubuntu 
 sudo chmod 666 /var/run/docker.sock 
 cd /home/ubuntu && su ubuntu 
@@ -11,4 +12,4 @@ sudo apt-get install apt-transport-https --yes
 echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list 
 sudo apt-get update 
 sudo apt-get install helm
-minikube start
+echo "done" >> /root/katacoda-background-finished
