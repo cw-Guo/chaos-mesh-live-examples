@@ -1,6 +1,9 @@
 In this session, we will use `minikube` to create local kubernetes cluster.
 
-Attention: in this katacoda environment, we have already installed `minicude` and `kubectl` for you.
+First we need to switch to a user which is created for this show case.
+`cd /home/ubuntu && su ubuntu`{{execute}}
+Your username is "ubuntu". Your password is "password".
+
 You can run `bash`{{execute}} to switch to bash shell.
 
 ## Install minicude
@@ -47,11 +50,11 @@ We can run `kubectl get nodes`{{execute}} to check node status. -->
 
 ## Start the cluster
 
-*Attention*: If you want to create multiple nodes cluster, you need to upgrade docker version. And you should run`minikube start -n 2`{{execute}}
+you can run`minikube start -n 2`{{execute}} to create a cluster with 2 nodes which would cost around 5 minutes.
 
 To check the cluster status, we can run `kubectl get services`{{execute}}. You will see a similar output as follows:
 
-You can run `kubectl get nodes`{{copy}} and the expeted output should be like
+You can run `kubectl get nodes`{{execute}} and the expeted output should be like
 ```
 NAME           STATUS   ROLES                  AGE    VERSION
 minikube       Ready    control-plane,master   102s   v1.23.1
