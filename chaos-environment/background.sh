@@ -2,7 +2,7 @@
 echo "done" >> /root/katacoda-finished
 useradd -m -d /home/ubuntu -G sudo -p $(openssl passwd -1 password) ubuntu && cd /home/ubuntu 
 sudo chmod 666 /var/run/docker.sock 
-cd /home/ubuntu && su ubuntu 
+# cd /home/ubuntu && su ubuntu 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
 sudo install minikube-linux-amd64 /usr/local/bin/minikube 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" 
