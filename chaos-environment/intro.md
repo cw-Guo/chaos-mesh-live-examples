@@ -1,4 +1,1 @@
-In this scenario, we created a user for you.
-Your username is "ubuntu". Your password is "password".
-
-minikube
+In this scenario, we created a kubernetes cluster for you.
