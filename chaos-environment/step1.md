@@ -1,6 +1,7 @@
 In this session, we will use `minikube` to create local kubernetes cluster.
 
 Attention: in this katacoda environment, we have already installed `minicude` and `kubectl` for you.
+You can run `bash`{{execute}} to switch to bash shell.
 
 ## Install minicude
 
