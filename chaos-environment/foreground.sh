@@ -1,2 +1,2 @@
 sleep 1; wait.sh
-minikube start
+minikube start -n 2
