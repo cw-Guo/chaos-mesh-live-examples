@@ -26,6 +26,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "ubuntu 18.04"
   }
 }
