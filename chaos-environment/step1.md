@@ -1,7 +1,7 @@
 In this session, we will use `minikube` to create local kubernetes cluster.
 
 First we need to switch to a user which is created for this show case.
-`cd /home/ubuntu && su ubuntu`{{execute}}
+run `cd /home/ubuntu && su ubuntu`{{execute}}
 Your username is "ubuntu". Your password is "password".
 
 You can run `bash`{{execute}} to switch to bash shell.
@@ -50,7 +50,7 @@ We can run `kubectl get nodes`{{execute}} to check node status. -->
 
 ## Start the cluster
 
-you can run`minikube start -n 2`{{execute}} to create a cluster with 2 nodes which would cost around 5 minutes.
+You can run`minikube start -n 2`{{execute}} to create a cluster with 2 nodes which would cost around 5 minutes.
 
 To check the cluster status, we can run `kubectl get services`{{execute}}. You will see a similar output as follows:
 
