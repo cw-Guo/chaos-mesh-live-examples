@@ -1,4 +1,4 @@
 In this scenario, we created a user for you.
 Your username is "ubuntu". Your password is "password".
 
-ubuntu 18.04
+kubernetes
