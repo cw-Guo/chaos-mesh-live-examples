@@ -1,7 +1,7 @@
 In this session, we have already used `minikube` to create local kubernetes cluster for you.
 
-First we need to switch to a user which is created for this show case.
-run `cd /home/ubuntu && su ubuntu`{{execute}}
+<!-- First we need to switch to a user which is created for this show case.
+run `cd /home/ubuntu && su ubuntu`{{execute}} -->
 Your username is "ubuntu". Your password is "password".
 
 You can run `bash`{{execute}} to switch to bash shell.
