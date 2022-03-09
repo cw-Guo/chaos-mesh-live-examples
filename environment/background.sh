@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "done" >> /root/katacoda-finished
-sleep 5s
+sleep 15s
 echo "done" >> /root/katacoda-background-finished
