@@ -29,7 +29,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "uimessage1":"\u001b[32mWelcome to Chaos Mesh Live examples Scenario.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "minikube-running"
