@@ -1,4 +1,17 @@
-In this session, we have already used `minikube` to create local kubernetes cluster for you.
+## Your Kubernetes Cluster status
+
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify that it's ready for your use:
+
+You can run the following commands to check the status
+
+```
+kubectl version --short && \
+kubectl get nodes && \
+kubectl get componentstatus && \
+kubectl cluster-info
+```{{execute}}
+
+It should list a 1-node cluster and the control plane components should be reporting Healthy. If it's not healthy, try again in a few moments. If it's still not functioning refresh the browser tab to start a fresh scenario instance before proceeding.
 
 <!-- First we need to switch to a user which is created for this show case.
 run `cd /home/ubuntu && su ubuntu`{{execute}} -->
