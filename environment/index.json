@@ -30,7 +30,8 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1":"\u001b[32mWelcome to Chaos Mesh Live examples Scenario.\u001b[m\r\n"
+    "uimessage1":"\u001b[32mWelcome to Chaos Mesh Live examples Scenario.\u001b[m\r\n",
+    "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Display 8001", "port": 8001}]
   },
   "backend": {
     "imageid": "minikube-running"
