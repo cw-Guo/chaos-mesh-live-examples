@@ -16,6 +16,8 @@ It should list a 1-node cluster and the control plane components should be repor
 dashboard:
 `setup.sh`{{execute}}
 
+https://[[HOST_SUBDOMAIN]]-8002-[[KATACODA_HOST]].environments.katacoda.com/#!/overview?namespace=default
+
 <!-- First we need to switch to a user which is created for this show case.
 run `cd /home/ubuntu && su ubuntu`{{execute}} -->
 Your username is "ubuntu". Your password is "password".
