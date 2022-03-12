@@ -13,6 +13,9 @@ kubectl cluster-info
 
 It should list a 1-node cluster and the control plane components should be reporting Healthy. If it's not healthy, try again in a few moments. If it's still not functioning refresh the browser tab to start a fresh scenario instance before proceeding.
 
+dashboard:
+`setup.sh`{{execute}}
+
 <!-- First we need to switch to a user which is created for this show case.
 run `cd /home/ubuntu && su ubuntu`{{execute}} -->
 Your username is "ubuntu". Your password is "password".
