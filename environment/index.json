@@ -25,14 +25,18 @@
     "assets": {
       "host01": [
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+          {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },
   "environment": {
     "uilayout": "terminal-iframe",
     "uimessage1":"\u001b[32mWelcome to Chaos Mesh Live examples Scenario.\u001b[m\r\n",
-    "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Kubernetes Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default"}]
+    "dashboards": [
+        {"name": "Kubernetes Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default"},
+        {"name": "Chaos Mesh Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/"}
+    ]
   },
   "backend": {
     "imageid": "minikube-running"

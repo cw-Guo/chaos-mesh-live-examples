@@ -13,4 +13,6 @@ helm repo add chaos-mesh https://charts.chaos-mesh.org
 kubectl create ns chaos-mesh
 helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3
 
+# wait cluster
+sleep 20s
 echo "done" >> /root/katacoda-background-finished
