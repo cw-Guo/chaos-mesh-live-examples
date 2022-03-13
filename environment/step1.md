@@ -13,10 +13,16 @@ kubectl cluster-info
 
 It should list a 1-node cluster and the control plane components should be reporting Healthy. If it's not healthy, try again in a few moments. If it's still not functioning refresh the browser tab to start a fresh scenario instance before proceeding.
 
-dashboard:
-`setup.sh`{{execute}}
+The Helm package manager used for installing applications on Kubernetes is also available:
 
-https://[[HOST_SUBDOMAIN]]-8002-[[KATACODA_HOST]].environments.katacoda.com/#!/overview?namespace=default
+`helm version --short`{{execute}}
+
+## Kubernetes Dashboard
+You can administer your cluster with the kubectl CLI tool or use the visual Kubernetes dashboard. The Dashboard can be accessed from the tab labeled Kubernetes Dashboard above the command line after the setup. 
+To set up, you need to run `setup.sh`{{execute}}
+You can check the pods status by runing `kubectl get pods -n kubernetes-dashboard`{{execute}}
+
+
 
 <!-- First we need to switch to a user which is created for this show case.
 run `cd /home/ubuntu && su ubuntu`{{execute}} -->
