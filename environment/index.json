@@ -12,6 +12,14 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -27,7 +35,9 @@
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "rbac.yaml", "target": "/root"}
+          {"file": "rbac.yaml", "target": "/root"},
+          {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "network-delay.yaml", "target": "/root"}
       ]
     }
   },
