@@ -26,13 +26,6 @@ You can visit the [dashboard](https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].
 You can check the pods status by runing `kubectl get pods -n kubernetes-dashboard`{{execute}}
 
 
-
-<!-- First we need to switch to a user which is created for this show case.
-run `cd /home/ubuntu && su ubuntu`{{execute}} -->
-Your username is "ubuntu". Your password is "password".
-
-You can run `bash`{{execute}} to switch to bash shell.
-
 ## Check minikube, kubectl, helm version
 
 We can use `minikube version`{{execute}} to check that we have already successfully installed `minicude` and its version.
@@ -64,6 +57,5 @@ kubernetes ClusterIP xxx.xx.x.x <none> 443/TCP 9s
 You can run `kubectl get nodes`{{execute}} and the expeted output should be like
 ```
 NAME           STATUS   ROLES                  AGE    VERSION
-minikube       Ready    control-plane,master   102s   v1.23.1
-minikube-m02   Ready    <none>                 68s    v1.23.1
+minikube       Ready    master   102s   v1.23.1
 ```

@@ -29,12 +29,14 @@ Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the ex
 
 `kubectl apply -f network-delay.yaml`{{execute}}
 
-The experiment is now running.
-
-`kubectl get NetworkChaos`{{execute}}
+After run the above command, chances are that you need to wait for a minute to wait for the schedule to start an eperiment. You can check the status via the Chaos Mesh dashboard or using `kubectl get NetworkChaos`{{execute}}
 
 ## Observe
 Access the web-show application (or use the tab). The application has a built-in graph that will show the latency it's experiencing. With the experiment applied you will see the 10ms delay. Look at the dashboard, find the experiment, and drill down on its details.
+
+Once you enter the front end of this web show application, you will see a picture which plots the latency to ping the cluster. If the experiment is successfully running, you will see a picture like the following one.
+
+![latency graph example](./assets/example.png)
 
 ## Update Experiment
 At any time you can change the YAML declaration and apply further experiment updates with:
