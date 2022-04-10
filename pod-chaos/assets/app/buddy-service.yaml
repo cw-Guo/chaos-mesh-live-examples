@@ -10,6 +10,6 @@ spec:
     app: buddy-service
   ports:
     - protocol: TCP # protocol selected for the ports below
-      port: 80 # incoming request port
+      port: 8082 # incoming request port
       targetPort: 5000 # port that the pod listens to
   # type: NodePort
