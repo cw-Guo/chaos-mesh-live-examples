@@ -35,7 +35,10 @@
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "rbac.yaml", "target": "/root"}
+          {"file": "rbac.yaml", "target": "/root"},
+          {"file": "app/buddy-deployment.yaml", "target": "/root/app"},
+          {"file": "app/buddy-front-door.yaml", "target": "/root/app"},
+          {"file": "app/buddy-service.yaml", "target": "/root/app"}
       ]
     }
   },
