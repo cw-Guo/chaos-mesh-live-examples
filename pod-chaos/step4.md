@@ -12,7 +12,8 @@ In this experiment, we would use a simple web application, in which it always re
 To depoly this application, you can run `kubectl apply -f ./app`{{execute}}, `deploy.sh`{{execute}}
 And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list.
 
-
+Or you can visit it via the tab.
+You will see a list of IPs.
 
 
 

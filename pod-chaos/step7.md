@@ -7,6 +7,8 @@ This experiment wouldn't change anything on the pod level.
 
 Before we start the experiment, you can go to our application and note down the three IPs listed there.
 
+For your convenienve, you can run `curl localhost:8082`{{execute}} instead to get the output of our application.
+
 ```yaml
 apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
@@ -23,6 +25,8 @@ spec:
 ```{{copy}}
 
 If you run `kubectl apply -f container-kill.yaml`{{execute}}, you will find that a pod's `restarts` updated.
+
+run `curl localhost:8082`{{execute}} to get the output of our application.
 
 Run `kubectl get pods`{{execute}}, the following output will show up.
 ```

@@ -1,10 +1,8 @@
-## Experiments
-
-### pod-failure experiment
+## pod-failure experiment
 In this experiment, we are going to make a certain pod unavailable for a period of time, eg: 120 seconds.
 When we call a certain pod unavailable, we are saying that a certain pod is unable to perform its duty, for example, responding to http requests.
 
-Pod Failure Chaos Experiment would change the image of each container in the target Pod to the `pause image`, which is a special image that does not perform any operations. But this wouldn't cause any problem if the container is configured without `command`, `livenessProbe` and `readinessProbe`: the container would be inspected as Running and Ready, even its image has been updated to `pause`. In this experiment, we configured a `Liveness probe`.
+Pod-failure Chaos experiment would change the image of each container in the target Pod to the `pause image`, which is a special image that does not perform any operations. But this wouldn't cause any problem if the container is configured without `command`, `livenessProbe` and `readinessProbe`: the container would be inspected as Running and Ready, even its image has been updated to `pause`. In this experiment, we configured a `Liveness probe`.
 
 Here is the yaml we use to deploy a pod-failure experiment.
 
@@ -23,6 +21,8 @@ spec:
       'app': 'buddy-service'
 ```{{copy}}
 
+Before the experiment, you can run `curl localhost:8082`{{execute}} to get the output of our application to get a available pods' ip list.
+
 After deploying this experiment by run `kubectl apply -f pod-failure.yaml`{{execute}}, you can expect that one of the pods has been injected and its image has been updated to `pause`. It would need several minutes before the experiment applies and hopefully the pod status would be `CrashLoopBackOff`.
 
 To help you check the pod status, run `wait-failure.sh`{{execute}} and then run `kubectl get pods`{{execute}} to check the status.
@@ -37,7 +37,13 @@ buddy-list-deployment-6d756fb8cf-zgnq8   0/1     CrashLoopBackOff   4          3
 You can check this via our application: https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list 
 And you will find that there are only two IPs left, which was three at the beginning.
 
-After the experiment finished, which is set via `duration: 120s`  in the yaml, you will find that the pod resume and three IPs are shown in the web application. If you try to run `kubectl get pods`{{execute}}, you would see a similiar output
+For your convenienve, you can run `curl localhost:8082`{{execute}} instead to get the output of our application.
+
+After the experiment finished, which is set via `duration: 120s`  in the yaml, you will find that the pod resume and three IPs are shown in the web application. 
+
+run `curl localhost:8082`{{execute}} to get the output of our application.
+
+If you try to run `kubectl get pods`{{execute}}, you would see a similiar output
 
 ```
 $ kubectl get pods

@@ -4,6 +4,7 @@ Before we start the next experiment, you may need to reset the kubernete's port 
 Based on this example, Chaos Mesh injects pod-kill into the specified Pod and kills the Pod once.
 
 Before we start the experiment, you can go to our application and note down the three IPs listed there.
+For your convenienve, you can run `curl localhost:8082`{{execute}} instead to get the output of our application.
 
 ```yaml
 apiVersion: chaos-mesh.org/v1alpha1
@@ -34,6 +35,8 @@ buddy-list-deployment-6d756fb8cf-nlr5c   1/1     Running   0          10m
 One of the pod's age would be pretty new and it's because our pod-kill experiment kill the old image, and the deployment's replica policy will always make sure that there are 3 replicas available, therefore, a new pod is created.
 
 And if you go back to the web application, you will find that the one of the IPs has been updated.
+
+run `curl localhost:8082`{{execute}} to get the output of our application.
 
 #### clear the experiment
 
