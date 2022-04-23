@@ -16,7 +16,7 @@ spec:
     spec: # specifications defined of the pods
       containers:
         - name: buddy-service #  name of app that pods run
-          image: lfx/buddy:latest # docker image: eploy on minikube in local
-          imagePullPolicy: Never # deploy on minikube in local
+          image: public.ecr.aws/u4r8f2v9/chaos-mesh:1.0.0 # docker image: eploy on minikube in local
+          # imagePullPolicy: Never # deploy on minikube in local
           ports:
             - containerPort: 5000 # listening port of the container
