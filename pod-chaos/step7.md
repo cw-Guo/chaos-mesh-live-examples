@@ -1,0 +1,16 @@
+### container-kill experiment
+Based on this example, Chaos Mesh injects container-kill into the specified container and kills the container once.
+```yaml
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: container-kill-example
+  # namespace: chaos-testing
+spec:
+  action: container-kill
+  mode: one
+  containerNames: ['buddy-service']
+  selector:
+    labelSelectors:
+      'app': 'buddy-service'
+```{{copy}}

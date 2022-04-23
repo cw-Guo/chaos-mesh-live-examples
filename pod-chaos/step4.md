@@ -13,23 +13,7 @@ In this experiment, we would use a simple web application, in which it always re
 To depoly this application, you can run `kubectl apply -f ./app`{{execute}}, `deploy.sh`{{execute}}
 And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list.
 
-### pod-failure experiment
-In this experiment, we are going to make a certain pod ubavailable for a period of time, eg: 30 seconds.
 
-```yaml
-apiVersion: chaos-mesh.org/v1alpha1
-kind: PodChaos
-metadata:
-  name: pod-failure-example
-  # namespace: chaos-testing
-spec:
-  action: pod-failure
-  mode: one
-  duration: '30s'
-  selector:
-    labelSelectors:
-      'app': 'buddy-service'
-```{{copy}}
 
 ### pod-kill example
 Based on this example, Chaos Mesh injects pod-kill into the specified Pod and kills the Pod once.

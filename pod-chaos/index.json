@@ -20,6 +20,18 @@
       {
         "title": "Step 4",
         "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7",
+        "text": "step7.md"
       }
     ],
     "intro": {
@@ -36,6 +48,9 @@
           {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "rbac.yaml", "target": "/root"},
+          {"file": "container-kill.yaml", "target": "/root"},
+          {"file": "pod-failure.yaml", "target": "/root"},
+          {"file": "pod-kill.yaml", "target": "/root"},
           {"file": "app/buddy-deployment.yaml", "target": "/root/app"},
           {"file": "app/buddy-front-door.yaml", "target": "/root/app"},
           {"file": "app/buddy-service.yaml", "target": "/root/app"},
