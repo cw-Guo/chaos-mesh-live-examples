@@ -10,7 +10,7 @@ For more information, please refer to the [official documentation](https://chaos
 
 ### the application
 In this experiment, we would use a simple web application, in which it always return all the available pods' ip address.
-To depoly this application, you can run `kubectl apply -f ./app`{{execute}}
+To depoly this application, you can run `kubectl apply -f ./app`{{execute}}, `deploy.sh`{{execute}}
 And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list.
 
 ### pod-failure experiment
