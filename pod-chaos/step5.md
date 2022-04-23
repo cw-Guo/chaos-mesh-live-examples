@@ -23,7 +23,9 @@ spec:
       'app': 'buddy-service'
 ```{{copy}}
 
-After deploying this experiment by run `kubectl apply -f pod-failure.yaml`{{execute}}, you can expect that one of the pods has been injected and its image has been updated to `pause`. It would need several seconds before the experiment applies and hopefully the pod status would be `CrashLoopBackOff` after around 20s.
+After deploying this experiment by run `kubectl apply -f pod-failure.yaml`{{execute}}, you can expect that one of the pods has been injected and its image has been updated to `pause`. It would need several minutes before the experiment applies and hopefully the pod status would be `CrashLoopBackOff`.
+
+To help you check the pod status, run `wait-failure.sh`{{execute}} and then run `kubectl get pods`{{execute}} to check the status.
 
 ```
 $ kubectl get pods

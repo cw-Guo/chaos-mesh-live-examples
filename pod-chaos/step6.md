@@ -21,7 +21,7 @@ spec:
       'app': 'buddy-service'
 ```{{copy}}
 
-If you run `kubect apply -f pod-kill`{{execute}}, you will find that a pod has been restarted.
+If you run `kubectl apply -f pod-kill.yaml`{{execute}}, you will find that a pod has been restarted.
 Run `kubectl get pods`{{execute}}, the following output will show up.
 ```
 $ kubectl get pods

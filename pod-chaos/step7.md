@@ -22,7 +22,7 @@ spec:
       'app': 'buddy-service'
 ```{{copy}}
 
-If you run `kubect apply -f container-kill`{{execute}}, you will find that a pod's `restarts` updated.
+If you run `kubectl apply -f container-kill.yaml`{{execute}}, you will find that a pod's `restarts` updated.
 
 Run `kubectl get pods`{{execute}}, the following output will show up.
 ```
@@ -33,7 +33,7 @@ buddy-list-deployment-6d756fb8cf-k5mpt   1/1     Running   0          17m
 buddy-list-deployment-6d756fb8cf-nlr5c   1/1     Running   1          27m
 ```
 
-And if you go back to the web application, you will find that the IPs are the same, which is different from the previous pod-kill eperiment.
+And if you go back to the web application, you will find that the IPs are the same because this container-kill experiment is on the container level, not the pod level, which is different from the pod-kill experiment.
 
 #### clear the experiment
 

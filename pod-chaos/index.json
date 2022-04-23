@@ -55,7 +55,8 @@
           {"file": "app/buddy-front-door.yaml", "target": "/root/app"},
           {"file": "app/buddy-service.yaml", "target": "/root/app"},
           {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "reset-network.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+          {"file": "reset-network.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "wait-failure.sh", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },

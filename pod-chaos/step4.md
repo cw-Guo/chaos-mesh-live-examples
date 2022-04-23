@@ -1,5 +1,4 @@
 ## Pod Chaos Experiment
-### PodChaos introduction​
 PodChaos is a fault type in Chaos Mesh. By creating a PodChaos experiment, you can simulate fault scenarios of the specified Pods or containers. Currently, PodChaos supports the following fault types:
 
 - Pod Failure: injects fault into a specified Pod to make the Pod unavailable for a period of time.
