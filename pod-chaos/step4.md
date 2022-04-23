@@ -10,8 +10,8 @@ For more information, please refer to the [official documentation](https://chaos
 
 ### the application
 In this experiment, we would use a simple web application, in which it always return all the available pods' ip address.
-To depoly this application, you can run `kubectl create -f ./app`{{execute}}
-And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/.
+To depoly this application, you can run `kubectl apply -f ./app`{{execute}}
+And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list.
 
 ### pod-failure experiment
 In this experiment, we are going to make a certain pod ubavailable for a period of time, eg: 30 seconds.
