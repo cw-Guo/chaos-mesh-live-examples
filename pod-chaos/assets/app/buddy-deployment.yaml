@@ -20,3 +20,12 @@ spec:
           # imagePullPolicy: Never # deploy on minikube in local
           ports:
             - containerPort: 5000 # listening port of the container
+          livenessProbe:
+            httpGet:
+              path: /buddy/list
+              port: 5000
+              # httpHeaders:
+              # - name: Custom-Header
+              #   value: Awesome
+            initialDelaySeconds: 3
+            periodSeconds: 3

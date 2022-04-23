@@ -21,14 +21,14 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
 metadata:
   name: pod-failure-example
-  namespace: chaos-testing
+  # namespace: chaos-testing
 spec:
   action: pod-failure
   mode: one
   duration: '30s'
   selector:
     labelSelectors:
-      'app.kubernetes.io/component': 'tikv'
+      'app': 'buddy-service'
 ```{{copy}}
 
 ### pod-kill example
@@ -39,15 +39,15 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
 metadata:
   name: pod-kill-example
-  namespace: chaos-testing
+  # namespace: chaos-testing
 spec:
   action: pod-kill
   mode: one
   selector:
-    namespaces:
-      - tidb-cluster-demo
+    # namespaces:
+    #   - tidb-cluster-demo
     labelSelectors:
-      'app.kubernetes.io/component': 'tikv'
+      'app': 'buddy-service'
 ```{{copy}}
 
 ### container-kill experiment
@@ -57,12 +57,12 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
 metadata:
   name: container-kill-example
-  namespace: chaos-testing
+  # namespace: chaos-testing
 spec:
   action: container-kill
   mode: one
-  containerNames: ['prometheus']
+  containerNames: ['buddy-service']
   selector:
     labelSelectors:
-      'app.kubernetes.io/component': 'monitor'
+      'app': 'buddy-service'
 ```{{copy}}
