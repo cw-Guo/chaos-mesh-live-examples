@@ -23,8 +23,15 @@ spec:
       'app': 'buddy-service'
 ```{{copy}}
 
-After deploying this experiment by run `kubectl apply -f pod-failure.yaml`{{execute}}, you can expect that one of the pods has been injected and its image has been updated to `pause`, hopefully the pod status would be `CrashLoopBackOff`.
+After deploying this experiment by run `kubectl apply -f pod-failure.yaml`{{execute}}, you can expect that one of the pods has been injected and its image has been updated to `pause`. It would need several seconds before the experiment applies and hopefully the pod status would be `CrashLoopBackOff` after around 20s.
 
+```
+$ kubectl get pods
+NAME                                     READY   STATUS             RESTARTS   AGE
+buddy-list-deployment-6d756fb8cf-lrxjb   1/1     Running            0          3m5s
+buddy-list-deployment-6d756fb8cf-nlr5c   1/1     Running            0          3m5s
+buddy-list-deployment-6d756fb8cf-zgnq8   0/1     CrashLoopBackOff   4          3m5s
+```
 You can check this via our application: https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list 
 And you will find that there are only two IPs left, which was three at the beginning.
 
@@ -32,8 +39,14 @@ After the experiment finished, which is set via `duration: 120s`  in the yaml, y
 
 ```
 $ kubectl get pods
-    NAME                                    READY   STATUS    RESTARTS   AGE
-    buddy-list-deployment-c4667c574-gww82   1/1     Running   2          11m
-    buddy-list-deployment-c4667c574-qnxc7   1/1     Running   0          11m
-    buddy-list-deployment-c4667c574-slk49   1/1     Running   0          11m
+NAME                                     READY   STATUS    RESTARTS   AGE
+buddy-list-deployment-6d756fb8cf-lrxjb   1/1     Running   0          4m14s
+buddy-list-deployment-6d756fb8cf-nlr5c   1/1     Running   0          4m14s
+buddy-list-deployment-6d756fb8cf-zgnq8   1/1     Running   5          4m14s
 ```
+
+Cool! You have finished this experiment and you can explore more about thi s on the offical document website.
+
+#### clear the experiment
+
+the experiment can be easily removed via `kubectl delete -f pod-failure.yaml`{{execute}}

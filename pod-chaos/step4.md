@@ -15,38 +15,5 @@ And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].envi
 
 
 
-### pod-kill example
-Based on this example, Chaos Mesh injects pod-kill into the specified Pod and kills the Pod once.
 
-```yaml
-apiVersion: chaos-mesh.org/v1alpha1
-kind: PodChaos
-metadata:
-  name: pod-kill-example
-  # namespace: chaos-testing
-spec:
-  action: pod-kill
-  mode: one
-  selector:
-    # namespaces:
-    #   - tidb-cluster-demo
-    labelSelectors:
-      'app': 'buddy-service'
-```{{copy}}
 
-### container-kill experiment
-Based on this example, Chaos Mesh injects container-kill into the specified container and kills the container once.
-```yaml
-apiVersion: chaos-mesh.org/v1alpha1
-kind: PodChaos
-metadata:
-  name: container-kill-example
-  # namespace: chaos-testing
-spec:
-  action: container-kill
-  mode: one
-  containerNames: ['buddy-service']
-  selector:
-    labelSelectors:
-      'app': 'buddy-service'
-```{{copy}}
