@@ -1,10 +1,10 @@
-### pod-kill example
+### Pod-kill Example
 Before we start the next experiment, you may need to reset the kubernete's port forward policy to avoid any application network problems. Run `reset-network.sh`{{execute}}
 
 Based on this example, Chaos Mesh injects pod-kill into the specified Pod and kills the Pod once.
 
 Before we start the experiment, you can go to our application and note down the three IPs listed there.
-For your convenienve, you can run `curl localhost:8082`{{execute}} instead to get the output of our application.
+For your convenienve, you can run `curl localhost:8082/buddy/list`{{execute}} instead to get the output of our application.
 
 ```yaml
 apiVersion: chaos-mesh.org/v1alpha1
@@ -36,7 +36,7 @@ One of the pod's age would be pretty new and it's because our pod-kill experimen
 
 And if you go back to the web application, you will find that the one of the IPs has been updated.
 
-run `curl localhost:8082`{{execute}} to get the output of our application.
+run `curl localhost:8082/buddy/list`{{execute}} to get the output of our application.
 
 #### clear the experiment
 

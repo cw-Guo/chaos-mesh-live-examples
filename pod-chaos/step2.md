@@ -10,7 +10,7 @@ The control plane components for the Chaos Mesh are:
 - chaos-daemon: These are the Pods that control the chaos mesh. The Pods run on every cluster Node and are wrapped in a DaemonSet. These DaemonSets have privileged system permissions to access each Node's network, cgroups, chroot, and other resources that are accessed based on your experiments.
 - chaos-dashboard: An optional web interface providing you an alternate means to administer the engine and experiments. Its use is for convenience and any production use of the engine should be through the YAML resources for the Chaos Mesh CRDs.
 
-The expect output of the above comman is like
+The expect output of the above command is like
 ```
 $ kubectl get deployments,pods,services --namespace chaos-mesh
 NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE

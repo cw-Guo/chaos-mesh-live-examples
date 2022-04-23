@@ -11,7 +11,7 @@ kubectl get componentstatus && \
 kubectl cluster-info
 ```{{execute}}
 
-It should list a 1-node cluster and the control plane components should be reporting Healthy. If it's not healthy, try again in a few moments. If it's still not functioning refresh the browser tab to start a fresh scenario instance before proceeding.
+It should list a 1-node cluster and the control plane components should be reporting Healthy. If it's not healthy, try again in a few moments. If it's still not functioning, refresh the browser tab to start a fresh scenario instance before proceeding.
 
 The Helm package manager used for installing applications on Kubernetes is also available:
 

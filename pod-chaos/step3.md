@@ -4,8 +4,8 @@ Chaos Mesh project offers a rich selection of experiment types. Currently, here 
 
 | Category    | Type | Experiment Description|
 | :---        |    :----:   |          ---: |
-| Pod Lifecycle | Pod Failure | Killing pods. |
-| Pod Lifecycle | Pod Kill | Pods becoming unavailable. |
+| Pod Lifecycle | Pod Failure | Pods becoming unavailable.|
+| Pod Lifecycle | Pod Kill | Killing pods. |
 | Pod Lifecycle | Container Kill | Killing containers in pods. |
 | Network | Partition | Separate Pods into independent subnets by blocking communication between them. |
 | Network | Loss | Inject network communication loss. |
