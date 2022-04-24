@@ -1,8 +1,8 @@
 {
-  "title": "environment-node-1",
-  "description": "set up a chaos mesh environment",
+  "title": "Chaos Mesh live example: network delay",
+  "description": "set up a chaos mesh environment and do an network-delay experiment",
   "difficulty": "Beginner",
-  "time": "2 mins",
+  "time": "15 mins",
   "details": {
     "steps": [
       {

@@ -4,8 +4,6 @@ Chaos Mesh project offers a rich selection of experiment types. Currently, here 
 
 | Category    | Type | Experiment Description|
 | :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
 | Pod Lifecycle | Pod Failure | Killing pods. |
 | Pod Lifecycle | Pod Kill | Pods becoming unavailable. |
 | Pod Lifecycle | Container Kill | Killing containers in pods. |
