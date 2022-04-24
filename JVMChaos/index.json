@@ -52,7 +52,7 @@
     "uimessage1":"\u001b[32mWelcome to Chaos Mesh Live examples Scenario.\u001b[m\r\n",
     "dashboards": [
         {"name": "Kubernetes Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default"},
-        {"name": "Chaos Mesh Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/"},
+        {"name": "Chaos Mesh Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/"}
     ]
   },
   "backend": {
