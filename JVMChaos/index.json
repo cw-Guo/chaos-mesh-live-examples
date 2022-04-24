@@ -1,0 +1,61 @@
+{
+  "title": "Chaos Mesh live example: JVM Chaos",
+  "description": "a live example for Chaos Mesh: JVM Chaos",
+  "difficulty": "Beginner",
+  "time": "15 mins",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "rbac.yaml", "target": "/root"},
+          {"file": "jvm/app.yaml", "target": "/root/jvm/"},
+          {"file": "jvm/jvm-execption-example.yaml", "target": "/root/jvm/"},
+          {"file": "jvm/jvm-return-example.yaml", "target": "/root/jvm/"},
+          {"file": "jvm/jvm-rule-data-example.yaml", "target": "/root/jvm/"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe",
+    "uimessage1":"\u001b[32mWelcome to Chaos Mesh Live examples Scenario.\u001b[m\r\n",
+    "dashboards": [
+        {"name": "Kubernetes Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default"},
+        {"name": "Chaos Mesh Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/"},
+    ]
+  },
+  "backend": {
+    "imageid": "minikube-running"
+  }
+}
