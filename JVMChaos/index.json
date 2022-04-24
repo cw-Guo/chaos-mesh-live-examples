@@ -41,7 +41,7 @@
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "rbac.yaml", "target": "/root"},
           {"file": "jvm/app.yaml", "target": "/root/jvm/"},
-          {"file": "jvm/jvm-execption-example.yaml", "target": "/root/jvm/"},
+          {"file": "jvm/jvm-exception-example.yaml", "target": "/root/jvm/"},
           {"file": "jvm/jvm-return-example.yaml", "target": "/root/jvm/"},
           {"file": "jvm/jvm-rule-data-example.yaml", "target": "/root/jvm/"}
       ]
