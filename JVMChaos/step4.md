@@ -72,13 +72,13 @@ spec:
       imagePullPolicy: IfNotPresent
 ```
 
-1. Build the application Pod:
+- Build the application Pod:
 
-`kubectl apply -f jvm/app.yaml`{{execute}}
+  `kubectl apply -f jvm/app.yaml`{{execute}}
 
-2. check the pod status
+- check the pod status
 
-`kubectl get pods`{{execute}}
+  `kubectl get pods`{{execute}}
 
 The result is as follows:
 ```
@@ -86,6 +86,9 @@ $ kubectl get pods
 NAME         READY   STATUS    RESTARTS   AGE
 helloworld   1/1     Running   0          34s
 ```
+
+After the READY column turns to 1/1, you can proceed to the next step.
+
 ### Observe the application
 You can observe the behavior of `helloworld` application before injecting faults, for example:
 

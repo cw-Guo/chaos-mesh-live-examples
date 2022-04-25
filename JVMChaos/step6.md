@@ -1,27 +1,29 @@
 ## Throw custom exceptions Experiment
 
-Before we go through the new experiment, we need to re-deploy our application, to make the logs look tidy.
-Of course, you can deploy multiple experiments in the same application.
+<!-- Before we go through the new experiment, we need to re-deploy our application, to make the logs look tidy.
+Of course, you can deploy multiple experiments in the same application. -->
 
-run
+<!-- run
 `kubectl delete -f jvm/app.yaml`{{execute}}
-`kubectl apply -f jvm/app.yaml`{{execute}}
+`kubectl apply -f jvm/app.yaml`{{execute}} -->
 
-then check the output, run `kubectl logs -f helloworld`{{execute}}
+check the output, run `kubectl logs -f helloworld`{{execute}}
 
 The result is as follows:
 ```
 $ kubectl logs -f helloworld
-0. Hello World
-1. Hello World
-2. Hello World
-3. Hello World
-4. Hello World
-5. Hello World
-6. Hello World
-7. Hello World
-8. Hello World
-9. Hello World
+84. Hello World
+85. Hello World
+86. Hello World
+87. Hello World
+88. Hello World
+89. Hello World
+90. Hello World
+91. Hello World
+92. Hello World
+93. Hello World
+94. Hello World
+95. Hello World
 ```
 
 Here is the YAML we use to deploy a JVM experiment: Throw custom exceptions
