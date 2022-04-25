@@ -68,14 +68,14 @@ After deploying this experiment by run `kubectl apply -f jvm/jvm-rule-data-examp
 run `kubectl logs -f helloworld`{{execute}} to get the output
 
 ```
-return execute
+Rule.execute called for modify return value_2:0
+modify return value execute
 caught ReturnException
 9999. Hello World
-Rule.execute called for return_0:0
-return execute
+Rule.execute called for modify return value_2:0
+modify return value execute
 caught ReturnException
 9999. Hello World
-Rule.execute called for return_0:0
 ```
 
 #### clear the experiment
