@@ -23,5 +23,5 @@ spec:
   value: "9999"
   mode: all
   selector:
-    namespaces:
-      - helloworld
+    labelSelectors:
+      'app': 'helloworld'

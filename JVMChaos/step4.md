@@ -11,6 +11,48 @@ For more information, please refer to the [official documentation](https://chaos
 In this experiment, we would use a simple java application, in which will print hundreds lines of `Hello World`.
 Feel free to check the [source code](https://github.com/WangXiangUSTC/byteman-example/blob/main/example.helloworld/HelloWorld/Main.java)
 
+We recommand you read the source code before proceeding to get a general idea about the program.
+
+```JAVA
+
+package HelloWorld;
+
+public class Main {
+    public static void main(String []args) {
+        for(int x = 0; x < 1000; x = x+1) {
+            try {
+                Thread.sleep(1000);
+                Main.sayhello(x);
+            } catch (Exception e) {
+                System.out.println("Got an exception!" + e);
+            }
+        }
+    }
+
+    public static void sayhello(int num) throws Exception {
+        try {
+            num = getnum(num);
+            String s=String.valueOf(num);
+
+            System.out.println(s + ". Hello World");
+        } catch (Exception e) { 
+            throw e;
+        }
+    }
+
+    public static int getnum(int num) {
+        return num;
+    }
+}
+
+```
+
+
+
+
+### Install the application
+
+The YAML to deploy the application is as follows:
 
 ```YAML
 apiVersion: v1
@@ -30,8 +72,41 @@ spec:
       imagePullPolicy: IfNotPresent
 ```
 
-To depoly this application, you can run `deploy.sh`{{execute}}
-And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list.
+1. Build the application Pod:
+
+`kubectl apply -f jvm/app.yaml`{{execute}}
+
+2. check the pod status
+
+`kubectl get pods`{{execute}}
+
+The result is as follows:
+```
+$ kubectl get pods
+NAME         READY   STATUS    RESTARTS   AGE
+helloworld   1/1     Running   0          34s
+```
+### Observe the application
+You can observe the behavior of `helloworld` application before injecting faults, for example:
+
+`kubectl logs -f helloworld`{{execute}}
+
+The result is as follows:
+```
+$ kubectl logs -f helloworld
+0. Hello World
+1. Hello World
+2. Hello World
+3. Hello World
+4. Hello World
+5. Hello World
+6. Hello World
+7. Hello World
+8. Hello World
+9. Hello World
+```
+
+You can see that `helloworld` outputs a line of Hello World every second, and the number of each line increases in turn.
 
 
 

@@ -23,5 +23,5 @@ spec:
   exception: java.io.IOException("BOOM")
   mode: all
   selector:
-    namespaces:
-      - helloworld
+    labelSelectors:
+      'app': 'helloworld'

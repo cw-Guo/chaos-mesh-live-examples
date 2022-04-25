@@ -21,5 +21,5 @@ spec:
   ruleData: "RULE modify return value\nCLASS Main\nMETHOD getnum\nAT ENTRY\nIF true\nDO\n    return 9999\nENDRULE"
   mode: all
   selector:
-    namespaces:
-      - helloworld
+    labelSelectors:
+      'app': 'helloworld'
