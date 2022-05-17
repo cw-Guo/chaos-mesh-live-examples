@@ -1,0 +1,37 @@
+{
+  "title": "chaos-mesh-environment-set-up",
+  "description": "set up a chaos mesh environment",
+  "difficulty": "Beginner",
+  "time": "2 mins",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code":"foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
