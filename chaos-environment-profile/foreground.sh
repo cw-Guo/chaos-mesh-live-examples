@@ -28,7 +28,7 @@ helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3 --se
 
 after_mesh=$(date +"%s")
 echo "install chaos-mesh ready spend: $(($after_mesh - $after_cluster)) s"
-
+echo $after_mesh
 # update docker
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FEEA9169307EA071
