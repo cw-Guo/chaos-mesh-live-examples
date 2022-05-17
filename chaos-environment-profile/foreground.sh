@@ -30,6 +30,9 @@ after_mesh=$(date +"%s")
 echo "install chaos-mesh ready spend: $(($after_mesh - $after_cluster)) s"
 
 # update docker
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FEEA9169307EA071
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B57C5C2836F4BEB
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 sudo usermod -aG docker $(whoami)
 sudo chmod 666 /var/run/docker.sock
