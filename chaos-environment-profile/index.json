@@ -1,6 +1,6 @@
 {
-  "title": "chaos-mesh-environment-set-up",
-  "description": "set up a chaos mesh environment",
+  "title": "chaos-mesh-environment-set-up profile",
+  "description": "set up a chaos mesh environment for profile",
   "difficulty": "Beginner",
   "time": "2 mins",
   "details": {
