@@ -51,6 +51,6 @@
     ]
   },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }
