@@ -9,7 +9,7 @@ Run `deploy.sh`{{execute}} and it would start the deployment. It will take a mom
 
 `kubectl get deployments,pods,services`{{execute}}
 
-With the web-show application running, its web interface can be accessed from the "Web Show" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/.
+With the web-show application running, its web interface can be accessed from the "Web Show" above the command-line area or this link: {{TRAFFIC_HOST1_8081}}.
 
 ## Define Experiment
 The Chaos Mesh has installed several custom resources:
