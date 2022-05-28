@@ -10,7 +10,7 @@ The control plane components for the Chaos Mesh are:
 - chaos-daemon: These are the Pods that control the chaos mesh. The Pods run on every cluster Node and are wrapped in a DaemonSet. These DaemonSets have privileged system permissions to access each Node's network, cgroups, chroot, and other resources that are accessed based on your experiments.
 - chaos-dashboard: An optional web interface providing you an alternate means to administer the engine and experiments. Its use is for convenience and any production use of the engine should be through the YAML resources for the Chaos Mesh CRDs.
 
-The expect output of the above command is like
+The expect output of the above comman is like
 ```
 $ kubectl get deployments,pods,services --namespace chaos-mesh
 NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
@@ -35,7 +35,7 @@ The chaos dashboard is accessible via a NodePort. For this scenario we need the 
 
 `kubectl patch service chaos-dashboard -n chaos-mesh --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-With the correct port value set, the web interface for Chaos Mesh dashboard can be seen from the tab Chaos Mesh above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+With the correct port value set, the web interface for Chaos Mesh dashboard can accessed from this link:{{TRAFFIC_HOST1_31111}}.
 
 You will need a name and a token to login the dashboard. To get the name and token, run `token.sh`{{execute}} and then fill them in the dashboard.
 

@@ -47,11 +47,13 @@
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "rbac.yaml", "target": "/root"},
-          {"file": "jvm/app.yaml", "target": "/root/jvm/"},
-          {"file": "jvm/jvm-exception-example.yaml", "target": "/root/jvm/"},
-          {"file": "jvm/jvm-return-example.yaml", "target": "/root/jvm/"},
-          {"file": "jvm/jvm-rule-data-example.yaml", "target": "/root/jvm/"}
+          {"file": "rbac.yaml", "target": "~/"},
+          {"file": "jvm/app.yaml", "target": "~/jvm/"},
+          {"file": "jvm/jvm-exception-example.yaml", "target": "~/jvm/"},
+          {"file": "jvm/jvm-return-example.yaml", "target": "~/jvm/"},
+          {"file": "jvm/jvm-rule-data-example.yaml", "target": "~/jvm/"},
+          {"file": "dashboard-adminuser.yaml", "target": "~/"},
+          {"file": "dashboard-token.sh", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },
@@ -64,6 +66,6 @@
     ]
   },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }
