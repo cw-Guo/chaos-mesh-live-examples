@@ -21,9 +21,10 @@ The Helm package manager used for installing applications on Kubernetes is also 
 You can administer your cluster with the kubectl CLI tool or use the visual Kubernetes dashboard. The Dashboard can be accessed from the tab labeled Kubernetes Dashboard above the command line after the setup. 
 To set up, you need to run `setup.sh`{{execute}}.
 
-You can visit the [dashboard](https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default)
+You can visit the [dashboard]({{TRAFFIC_HOST1_8001}}/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/overview?namespace=default)
 
-{{TRAFFIC_HOST1_8001}}/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default
+For the reason of security, you would be required to input a token, which could be retrieved using this command: `kubectl -n kubernetes-dashboard create token admin-user`{{execute}}
+
 You can check the pods status by runing `kubectl get pods -n kubernetes-dashboard`{{execute}}
 
 
