@@ -51,16 +51,18 @@
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "rbac.yaml", "target": "/root"},
-          {"file": "container-kill.yaml", "target": "/root"},
-          {"file": "pod-failure.yaml", "target": "/root"},
-          {"file": "pod-kill.yaml", "target": "/root"},
-          {"file": "app/buddy-deployment.yaml", "target": "/root/app"},
-          {"file": "app/buddy-front-door.yaml", "target": "/root/app"},
-          {"file": "app/buddy-service.yaml", "target": "/root/app"},
+          {"file": "rbac.yaml", "target": "~/"},
+          {"file": "container-kill.yaml", "target": "~/"},
+          {"file": "pod-failure.yaml", "target": "~/"},
+          {"file": "pod-kill.yaml", "target": "~/"},
+          {"file": "app/buddy-deployment.yaml", "target": "~/app"},
+          {"file": "app/buddy-front-door.yaml", "target": "~/app"},
+          {"file": "app/buddy-service.yaml", "target": "~/app"},
           {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "reset-network.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "wait-failure.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+          {"file": "wait-failure.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "dashboard-adminuser.yaml", "target": "~/"},
+          {"file": "dashboard-token.sh", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },
@@ -74,6 +76,6 @@
     ]
   },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }

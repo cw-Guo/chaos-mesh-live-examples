@@ -34,7 +34,7 @@ buddy-list-deployment-6d756fb8cf-lrxjb   1/1     Running            0          3
 buddy-list-deployment-6d756fb8cf-nlr5c   1/1     Running            0          3m5s
 buddy-list-deployment-6d756fb8cf-zgnq8   0/1     CrashLoopBackOff   4          3m5s
 ```
-You can check this via our application: https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list 
+You can check this via our application: [here]({{TRAFFIC_HOST1_8082}}/buddy/list) 
 And you will find that there are only two IPs left, which was three at the beginning.
 
 For your convenienve, you can run `curl localhost:8082/buddy/list`{{execute}} instead to get the output of our application.

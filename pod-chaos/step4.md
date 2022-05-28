@@ -10,7 +10,7 @@ For more information, please refer to the [official documentation](https://chaos
 ### The Application
 In this experiment, we would use a simple web application, in which it always return all the available pods' IP address.
 To depoly this application, you can run `deploy.sh`{{execute}}
-And you can visit it here https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/buddy/list.
+And you can visit it [here]({{TRAFFIC_HOST1_8082}}/buddy/list).
 
 Or you can visit it via the tab.
 You will see a list of IPs.
