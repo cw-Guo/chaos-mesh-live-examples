@@ -35,9 +35,9 @@
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "rbac.yaml", "target": "/root"},
+          {"file": "rbac.yaml", "target": "~/"},
           {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "network-delay.yaml", "target": "/root"}
+          {"file": "network-delay.yaml", "target": "~/"}
       ]
     }
   },
