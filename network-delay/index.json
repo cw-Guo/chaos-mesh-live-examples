@@ -37,7 +37,8 @@
           {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "rbac.yaml", "target": "~/"},
           {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "network-delay.yaml", "target": "~/"}
+          {"file": "network-delay.yaml", "target": "~/"},
+          {"file": "dashboard-adminuser.yaml", "target": "~/"}
       ]
     }
   },
