@@ -23,7 +23,7 @@ To set up, you need to run `setup.sh`{{execute}}.
 
 You can visit the [dashboard]({{TRAFFIC_HOST1_8001}}/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/overview?namespace=default)
 
-For the reason of security, you would be required to input a token, which could be retrieved using this command: `kubectl -n kubernetes-dashboard create token admin-user`{{execute}}
+For the reason of security, you would be required to input a token, which could be retrieved using this command: `dashboard-token.sh`{{execute}}
 
 You can check the pods status by runing `kubectl get pods -n kubernetes-dashboard`{{execute}}
 
