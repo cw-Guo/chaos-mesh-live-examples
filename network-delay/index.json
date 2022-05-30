@@ -39,7 +39,8 @@
           {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
           {"file": "network-delay.yaml", "target": "~/"},
           {"file": "dashboard-adminuser.yaml", "target": "~/"},
-          {"file": "dashboard-token.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+          {"file": "dashboard-token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "wait-delay.sh", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },

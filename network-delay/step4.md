@@ -9,7 +9,7 @@ Run `deploy.sh`{{execute}} and it would start the deployment. It will take a mom
 
 `kubectl get deployments,pods,services`{{execute}}
 
-With the web-show application running, its web interface can be accessed from the "Web Show" above the command-line area or this link: {{TRAFFIC_HOST1_8081}}.
+With the web-show application running, its web interface can be accessed from the "Web Show" above the command-line area or this link: [Web Show]({{TRAFFIC_HOST1_8081}}).
 
 ## Define Experiment
 The Chaos Mesh has installed several custom resources:
@@ -29,7 +29,9 @@ Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the ex
 
 `kubectl apply -f network-delay.yaml`{{execute}}
 
-After run the above command, chances are that you need to wait for a minute to wait for the schedule to start an eperiment. You can check the status via the Chaos Mesh dashboard or using `kubectl get NetworkChaos`{{execute}}
+After run the above command, chances are that you need to wait for a minute to wait for the schedule to start an eperiment. 
+Run this script to wait for the experiment to be applied, `wait-delay`{{execute}}
+You can check the status via the Chaos Mesh dashboard or using `kubectl get NetworkChaos`{{execute}}
 
 ## Observe
 Access the web-show application (or use the tab). The application has a built-in graph that will show the latency it's experiencing. With the experiment applied you will see the 10ms delay. Look at the dashboard, find the experiment, and drill down on its details.
