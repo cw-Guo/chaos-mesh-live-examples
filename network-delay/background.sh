@@ -11,7 +11,7 @@ chmod 700 get_helm.sh
 # install chaos-mesh
 helm repo add chaos-mesh https://charts.chaos-mesh.org
 kubectl create ns chaos-mesh
-helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3 --set chaosDaemon.env.DOCKER_API_VERSION=1.40
+helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3 --set chaosDaemon.env.DOCKER_API_VERSION=1.40 --set chaosDaemon.runtime=containerd
 # # update docker
 # curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 # sudo usermod -aG docker $(whoami)
