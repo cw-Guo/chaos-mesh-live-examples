@@ -30,7 +30,7 @@ Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the ex
 `kubectl apply -f network-delay.yaml`{{execute}}
 
 After run the above command, chances are that you need to wait for a minute to wait for the schedule to start an eperiment. 
-Run this script to wait for the experiment to be applied, `wait-delay`{{execute}}
+Run this script to wait for the experiment to be applied, `wait-delay.sh`{{execute}}
 You can check the status via the Chaos Mesh dashboard or using `kubectl get NetworkChaos`{{execute}}
 
 ## Observe

@@ -35,7 +35,7 @@ The chaos dashboard is accessible via a NodePort. For this scenario we need the 
 
 `kubectl patch service chaos-dashboard -n chaos-mesh --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-With the correct port value set, the web interface for Chaos Mesh dashboard can accessed from this link:["Chaos Mesh Dashboard"]({{TRAFFIC_HOST1_31111}}).
+With the correct port value set, the web interface for Chaos Mesh dashboard can accessed from this link:[Chaos Mesh Dashboard]({{TRAFFIC_HOST1_31111}}).
 
 You will need a name and a token to login the dashboard. To get the name and token, run `token.sh`{{execute}} and then fill them in the dashboard.
 
