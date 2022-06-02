@@ -1,15 +1,20 @@
 #!/bin/bash
 echo "done" >> /root/katacoda-finished
-useradd -m -d /home/ubuntu -G sudo -p $(openssl passwd -1 password) ubuntu && cd /home/ubuntu 
-sudo chmod 666 /var/run/docker.sock 
-# cd /home/ubuntu && su ubuntu 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
-sudo install minikube-linux-amd64 /usr/local/bin/minikube 
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" 
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl 
-curl https://baltocdn.com/helm/signing.asc | sudo apt-key add - 
-sudo apt-get install apt-transport-https --yes  
-echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list 
-sudo apt-get update > /dev/null
-sudo apt-get install helm
+# update helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
+# # wait cluster
+# sleep 20s
+
+# install chaos-mesh
+helm repo add chaos-mesh https://charts.chaos-mesh.org
+kubectl create ns chaos-mesh
+helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3 --set chaosDaemon.env.DOCKER_API_VERSION=1.40 --set chaosDaemon.runtime=containerd --set chaosDaemon.socketPath=/var/run/containerd/containerd.sock
+# curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+# sudo usermod -aG docker $(whoami)
+# sudo chmod 666 /var/run/docker.sock
+# wait cluster
+# sleep 20s
 echo "done" >> /root/katacoda-background-finished
