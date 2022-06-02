@@ -33,7 +33,7 @@
         {"file": "token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
         {"file": "rbac.yaml", "target": "~/"},
         {"file": "dashboard-adminuser.yaml", "target": "~/"},
-        {"file": "dashboard-token.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+        {"file": "dashboard-token.sh", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },
